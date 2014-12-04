@@ -1,13 +1,12 @@
 {
   "name": "grammar-token-limit",
   "main": "./lib/grammar-token-limit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Change Atom's token limit for syntax highlighting.",
   "repository": "https://github.com/postcasio/atom-grammar-token-limit",
   "license": "MIT",
   "engines": {
     "atom": ">=0.152.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
