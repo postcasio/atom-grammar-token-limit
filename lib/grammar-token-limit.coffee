@@ -10,11 +10,11 @@ module.exports =
 
   activate: (state) ->
     @subs = new CompositeDisposable
-    @subs.add atom.syntax.onDidAddGrammar (grammar) ->
+    @subs.add atom.grammars.onDidAddGrammar (grammar) ->
       grammar.maxTokensPerLine = atom.config.get 'grammar-token-limit.maxTokensPerLine'
 
     @subs.add atom.config.observe 'grammar-token-limit.maxTokensPerLine', (maxTokensPerLine) ->
-      for grammar in atom.syntax.getGrammars()
+      for grammar in atom.grammars.getGrammars()
           grammar.maxTokensPerLine = maxTokensPerLine
 
   deactivate: ->
